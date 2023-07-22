@@ -6,9 +6,9 @@ import Preferences from '../Preferences/Preferences';
 import Login from '../Login/Login';
 import useToken from './useToken';
 
-const { token, setToken } = useToken();
+
 function App() {
-  const token = getToken();
+  const { token, setToken } = useToken();
 
   if(!token){
     return <Login setToken={setToken} />
